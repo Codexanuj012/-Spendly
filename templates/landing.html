@@ -20,6 +20,44 @@
         <a href="{{ url_for('register') }}" class="btn-primary">Create free account</a>
         <a href="#" class="btn-secondary">See how it works →</a>
     </div>
+    <div class="dashboard-preview">
+        <div class="browser-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+        </div>
+        <div class="stats-row">
+            <div class="stat-card">
+                <p class="stat-label">This month</p>
+                <p class="stat-value">₹18,240</p>
+                <p class="stat-change positive">+12% vs last</p>
+            </div>
+            <div class="stat-card">
+                <p class="stat-label">Budget left</p>
+                <p class="stat-value">₹6,760</p>
+                <p class="stat-change positive">43% remaining</p>
+            </div>
+            <div class="stat-card">
+                <p class="stat-label">Transactions</p>
+                <p class="stat-value">34</p>
+                <p class="stat-change">this month</p>
+            </div>
+        </div>
+        <div class="expense-bars">
+            <div class="bar-row">
+                <span>Food</span>
+                <div class="bar"><div class="fill orange" style="width:75%"></div></div>
+            </div>
+            <div class="bar-row">
+                <span>Travel</span>
+                <div class="bar"><div class="fill blue" style="width:55%"></div></div>
+            </div>
+            <div class="bar-row">
+                <span>Bills</span>
+                <div class="bar"><div class="fill purple" style="width:35%"></div></div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section class="features">
