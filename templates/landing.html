@@ -5,59 +5,20 @@
 {% block content %}
 
 <section class="hero">
-    <div class="hero-inner">
-        <div class="hero-badge">Personal Finance Tracker</div>
-        <h1 class="hero-title">
-            Know where your<br>
-            <em>money goes</em>
-        </h1>
-        <p class="hero-subtitle">
-            Log expenses, understand your spending patterns,
-            and take control of your financial life —
-            one transaction at a time.
-        </p>
-        <div class="hero-actions">
-            <a href="{{ url_for('register') }}" class="btn-primary">Start tracking free</a>
-            <a href="{{ url_for('login') }}" class="btn-ghost">Sign in</a>
-        </div>
+    <div class="hero-badge">
+        <span class="badge-dot"></span> Free to use · No credit card needed
     </div>
-    <div class="hero-visual">
-        <div class="mock-card">
-            <div class="mock-card-header">
-                <span class="mock-label">March 2026</span>
-                <span class="mock-total">₹12,450</span>
-            </div>
-            <div class="mock-bars">
-                <div class="mock-bar-row">
-                    <span class="mock-cat">Bills</span>
-                    <div class="mock-bar-track">
-                        <div class="mock-bar" style="width: 72%"></div>
-                    </div>
-                    <span class="mock-amt">₹4,500</span>
-                </div>
-                <div class="mock-bar-row">
-                    <span class="mock-cat">Food</span>
-                    <div class="mock-bar-track">
-                        <div class="mock-bar mock-bar-2" style="width: 52%"></div>
-                    </div>
-                    <span class="mock-amt">₹3,200</span>
-                </div>
-                <div class="mock-bar-row">
-                    <span class="mock-cat">Health</span>
-                    <div class="mock-bar-track">
-                        <div class="mock-bar mock-bar-3" style="width: 33%"></div>
-                    </div>
-                    <span class="mock-amt">₹2,050</span>
-                </div>
-                <div class="mock-bar-row">
-                    <span class="mock-cat">Transport</span>
-                    <div class="mock-bar-track">
-                        <div class="mock-bar mock-bar-4" style="width: 28%"></div>
-                    </div>
-                    <span class="mock-amt">₹1,800</span>
-                </div>
-            </div>
-        </div>
+    <h1 class="hero-title">
+        Track every rupee.<br>
+        <span class="hero-highlight">Know where it goes.</span>
+    </h1>
+    <p class="hero-subtitle">
+        Spendly helps you log expenses, spot patterns, and stay<br>
+        on budget — without the spreadsheet headache.
+    </p>
+    <div class="hero-buttons">
+        <a href="{{ url_for('register') }}" class="btn-primary">Create free account</a>
+        <a href="#" class="btn-secondary">See how it works →</a>
     </div>
 </section>
 
