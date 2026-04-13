@@ -1,0 +1,190 @@
+{% extends "base.html" %}
+
+{% block title %}Privacy Policy — Spendly{% endblock %}
+
+{% block head %}
+<style>
+    .privacy-page {
+        padding: 4rem 2rem 5rem;
+        min-height: calc(100vh - 60px - 100px);
+        background: linear-gradient(180deg, var(--paper-warm) 0%, var(--paper) 100%);
+    }
+
+    .privacy-container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .privacy-container h1 {
+        font-family: var(--font-display);
+        font-size: clamp(2rem, 4vw, 2.75rem);
+        color: var(--ink);
+        margin-bottom: 0.5rem;
+        letter-spacing: -0.02em;
+    }
+
+    .privacy-intro {
+        font-size: 0.9rem;
+        color: var(--ink-muted);
+        margin-bottom: 2.5rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .privacy-section {
+        background: var(--paper-card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-md);
+        padding: 1.75rem;
+        margin-bottom: 1.25rem;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .privacy-section:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        border-color: var(--accent-light);
+    }
+
+    .privacy-section h2 {
+        font-family: var(--font-display);
+        font-size: 1.25rem;
+        color: var(--accent);
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .privacy-section h2::before {
+        content: "◈";
+        font-size: 0.9rem;
+        color: var(--accent-2);
+    }
+
+    .privacy-section p {
+        font-size: 0.95rem;
+        color: var(--ink-soft);
+        line-height: 1.75;
+    }
+
+    .privacy-section ul {
+        list-style: none;
+        padding-left: 0.5rem;
+    }
+
+    .privacy-section ul li {
+        position: relative;
+        padding-left: 1.5rem;
+        margin-bottom: 0.75rem;
+        font-size: 0.95rem;
+        color: var(--ink-soft);
+        line-height: 1.6;
+    }
+
+    .privacy-section ul li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: var(--accent-2);
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+
+    .privacy-section:last-child {
+        margin-bottom: 0;
+    }
+
+    .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 2rem;
+        color: var(--ink-muted);
+        font-size: 0.9rem;
+        transition: color 0.2s;
+    }
+
+    .back-link:hover {
+        color: var(--accent);
+    }
+
+    .back-link::before {
+        content: "←";
+        font-size: 1.1rem;
+    }
+
+    @media (max-width: 600px) {
+        .privacy-page {
+            padding: 2.5rem 1rem 3rem;
+        }
+
+        .privacy-section {
+            padding: 1.25rem;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<section class="privacy-page">
+    <div class="privacy-container">
+        <h1>Privacy Policy</h1>
+        <p class="privacy-intro">Last updated: April 2026</p>
+
+        <section class="privacy-section">
+            <h2>Data We Collect</h2>
+            <p>When you use Spendly, we collect and store the following information:</p>
+            <ul>
+                <li>Account information (email address and password hash)</li>
+                <li>Expense entries you create (amount, category, date, description)</li>
+                <li>Usage data to improve our service</li>
+            </ul>
+        </section>
+
+        <section class="privacy-section">
+            <h2>How We Use Your Data</h2>
+            <p>Your data is used solely for the following purposes:</p>
+            <ul>
+                <li>To provide and maintain the expense tracking service</li>
+                <li>To display your personal financial summaries and insights</li>
+                <li>To improve user experience and app functionality</li>
+                <li>To communicate important service updates</li>
+            </ul>
+        </section>
+
+        <section class="privacy-section">
+            <h2>Data Storage & Security</h2>
+            <p>We implement industry-standard security measures to protect your data. Your information is stored in encrypted databases with access controls. Passwords are hashed using secure algorithms before storage. We regularly review our security practices to ensure your data remains protected.</p>
+        </section>
+
+        <section class="privacy-section">
+            <h2>Third Party Services</h2>
+            <p>Spendly does not sell, trade, or rent your personal data to third parties. We may use trusted service providers for hosting and analytics, but they are bound by confidentiality agreements and cannot use your data for their own purposes.</p>
+        </section>
+
+        <section class="privacy-section">
+            <h2>Your Rights</h2>
+            <p>You have the right to:</p>
+            <ul>
+                <li>Access all data we hold about you</li>
+                <li>Request correction of inaccurate data</li>
+                <li>Request deletion of your account and all associated data</li>
+                <li>Export your data in a portable format</li>
+            </ul>
+        </section>
+
+        <section class="privacy-section">
+            <h2>Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the new policy on this page and updating the "Last updated" date.</p>
+        </section>
+
+        <section class="privacy-section">
+            <h2>Contact Us</h2>
+            <p>If you have questions about this Privacy Policy or our data practices, please contact us. We are committed to addressing your concerns and ensuring your privacy is respected.</p>
+        </section>
+
+        <a href="{{ url_for('landing') }}" class="back-link">Back to Home</a>
+    </div>
+</section>
+{% endblock %}
