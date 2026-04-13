@@ -1,0 +1,174 @@
+{% extends "base.html" %}
+
+{% block title %}Terms and Conditions — Spendly{% endblock %}
+
+{% block head %}
+<style>
+    .terms-page {
+        padding: 4rem 2rem 5rem;
+        min-height: calc(100vh - 60px - 100px);
+        background: linear-gradient(180deg, var(--paper-warm) 0%, var(--paper) 100%);
+    }
+
+    .terms-container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .terms-container h1 {
+        font-family: var(--font-display);
+        font-size: clamp(2rem, 4vw, 2.75rem);
+        color: var(--ink);
+        margin-bottom: 0.5rem;
+        letter-spacing: -0.02em;
+    }
+
+    .terms-intro {
+        font-size: 0.9rem;
+        color: var(--ink-muted);
+        margin-bottom: 2.5rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .terms-section {
+        background: var(--paper-card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-md);
+        padding: 1.75rem;
+        margin-bottom: 1.25rem;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .terms-section:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        border-color: var(--accent-light);
+    }
+
+    .terms-section h2 {
+        font-family: var(--font-display);
+        font-size: 1.25rem;
+        color: var(--accent);
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .terms-section h2::before {
+        content: "◈";
+        font-size: 0.9rem;
+        color: var(--accent-2);
+    }
+
+    .terms-section p {
+        font-size: 0.95rem;
+        color: var(--ink-soft);
+        line-height: 1.75;
+    }
+
+    .terms-section ul {
+        list-style: none;
+        padding-left: 0.5rem;
+    }
+
+    .terms-section ul li {
+        position: relative;
+        padding-left: 1.5rem;
+        margin-bottom: 0.75rem;
+        font-size: 0.95rem;
+        color: var(--ink-soft);
+        line-height: 1.6;
+    }
+
+    .terms-section ul li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: var(--accent-2);
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+
+    .terms-section:last-child {
+        margin-bottom: 0;
+    }
+
+    .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 2rem;
+        color: var(--ink-muted);
+        font-size: 0.9rem;
+        transition: color 0.2s;
+    }
+
+    .back-link:hover {
+        color: var(--accent);
+    }
+
+    .back-link::before {
+        content: "←";
+        font-size: 1.1rem;
+    }
+
+    @media (max-width: 600px) {
+        .terms-page {
+            padding: 2.5rem 1rem 3rem;
+        }
+
+        .terms-section {
+            padding: 1.25rem;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<section class="terms-page">
+    <div class="terms-container">
+        <h1>Terms and Conditions</h1>
+        <p class="terms-intro">Last updated: April 2026</p>
+
+        <section class="terms-section">
+            <h2>Acceptance of Terms</h2>
+            <p>By accessing and using Spendly, you accept and agree to be bound by these Terms and Conditions. If you do not agree to these terms, please do not use this service.</p>
+        </section>
+
+        <section class="terms-section">
+            <h2>Use of Service</h2>
+            <p>Spendly is a personal expense tracking application designed to help you log and monitor your financial transactions. You agree to:</p>
+            <ul>
+                <li>Use the service only for lawful purposes</li>
+                <li>Provide accurate and complete expense information</li>
+                <li>Maintain the security of your account credentials</li>
+                <li>Not misuse or attempt to gain unauthorized access to the service</li>
+            </ul>
+        </section>
+
+        <section class="terms-section">
+            <h2>User Data</h2>
+            <p>You are responsible for all data you enter into Spendly. We recommend regularly backing up your expense records. While we strive to maintain data integrity, we cannot guarantee that the service will be uninterrupted or error-free.</p>
+        </section>
+
+        <section class="terms-section">
+            <h2>Limitations of Liability</h2>
+            <p>Spendly is provided "as is" without warranties of any kind. We are not liable for any damages arising from the use or inability to use this service. This service is for personal financial tracking only and should not be used as a substitute for professional financial advice.</p>
+        </section>
+
+        <section class="terms-section">
+            <h2>Changes to Terms</h2>
+            <p>We reserve the right to modify these terms at any time. Continued use of the service after changes constitutes acceptance of the new terms.</p>
+        </section>
+
+        <section class="terms-section">
+            <h2>Contact</h2>
+            <p>If you have questions about these Terms and Conditions, please contact us.</p>
+        </section>
+
+        <a href="{{ url_for('landing') }}" class="back-link">Back to Home</a>
+    </div>
+</section>
+{% endblock %}
